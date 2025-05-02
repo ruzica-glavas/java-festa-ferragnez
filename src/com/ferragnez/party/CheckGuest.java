@@ -10,7 +10,7 @@ public class CheckGuest {
         System.out.println("Come ti chiami?");
         String nome = input.nextLine();
 
-        boolean foundName = false;
+        //boolean foundName = false;
 
         //for(int i=0; i<guests.length; i++){
             //System.out.println(guests[i]);
@@ -24,17 +24,19 @@ public class CheckGuest {
        // }
         
        int i=0;
-       while (i<guests.length){
+       boolean foundName = false;
+       
+       while (!foundName && i<guests.length){
        
         if (nome.equalsIgnoreCase(guests[i])){
                    System.out.println("Il tuo nome fa parte della lista, quindi puoi entrare:"+" "+ guests[i]);
                   foundName=true;
                    
-                  break;
+                  
                    
                } 
         i ++;
-        
+
        }
         
         if (!foundName){
