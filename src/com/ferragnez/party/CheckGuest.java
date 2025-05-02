@@ -12,23 +12,39 @@ public class CheckGuest {
 
         boolean foundName = false;
 
-        for(int i=0; i<guests.length; i++){
+        //for(int i=0; i<guests.length; i++){
             //System.out.println(guests[i]);
 
-            if (nome.equals (guests[i])){
-                System.out.println("Il tuo nome fa parte della lista, quindi puoi entrare");
-                foundName=true;
-                break;
+         //   if (nome.equalsIgnoreCase(guests[i])){
+        //        System.out.println("Il tuo nome fa parte della lista, quindi puoi entrare:"+" "+ guests[i]);
+        //        foundName=true;
+        //        break;
                
-            } 
-        }
+        //    } 
+       // }
+        
+       int i=0;
+       while (i<guests.length){
+       
+        if (nome.equalsIgnoreCase(guests[i])){
+                   System.out.println("Il tuo nome fa parte della lista, quindi puoi entrare:"+" "+ guests[i]);
+                  foundName=true;
+                   
+                  break;
+                   
+               } 
+        i ++;
+        
+       }
         
         if (!foundName){
             System.out.println("Il tuo nome non fa parte della lista quindi non puoi entrare");
         }
         
-
+       
 
         input.close();
     }
-}
+
+    }
+
